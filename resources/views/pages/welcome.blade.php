@@ -8,21 +8,21 @@
     <div class="slider">
         <ul class="slides">
             <li>
-                <img src="//lorempixel.com/1920/860/sports">
+                <img src="/img/sport1.JPG">
                 <div class="caption center-align">
                     <h3>Verschiedene Sportarten</h3>
                     <h5 class="light grey-text text-lighten-3">Einfach verwaltet!</h5>
                 </div>
             </li>
             <li>
-                <img src="//lorempixel.com/1920/860/sports">
+                <img src="/img/sport2.JPG">
                 <div class="caption left-align">
                     <h3>Verschiedene Spielmodi</h3>
                     <h5 class="light grey-text text-lighten-3">Für alle Bedürfnisse!</h5>
                 </div>
             </li>
             <li>
-                <img src="//lorempixel.com/1920/860/sports">
+                <img src="/img/sport3.JPG">
                 <div class="caption left-align">
                     <h3>Verschiedene Felder</h3>
                     <h5 class="light grey-text text-lighten-3">So viele Mannschaften wie ihr wollt!</h5>
