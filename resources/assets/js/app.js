@@ -13,8 +13,18 @@ require('./bootstrap');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
+/*
 Vue.component('example', require('./components/Example.vue'));
 
 const app = new Vue({
     el: '#app'
+});
+*/
+
+$(document).ready(function(){
+    $('.slider').slider();
+});
+
+$(document).ready(function() {
+    $('select').material_select();
 });
