@@ -40,7 +40,7 @@
                         <p>Hier kann die Turnierverwaltung ohne Anmeldung gestartet werden.</p>
                     </div>
                     <div class="card-action center">
-                        <a href="eingaben.html">Start</a>
+                        <a href="/eingaben">Start</a>
                     </div>
                 </div>
             </div>

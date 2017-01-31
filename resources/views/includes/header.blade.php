@@ -11,9 +11,9 @@
             <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
             <ul id="nav-mobile" class="left hide-on-med-and-down">
                 <li><a href="/eingaben">Eingaben</a></li>
-                <li><a href="mannschaften.html">Mannschaften</a></li>
-                <li class="active"><a href="zeit.html">Zeiten</a></li>
-                <li><a href="registrierung.html">Anmeldung</a></li>
+                <li><a href="/mannschaften">Mannschaften</a></li>
+                <li class="active"><a href="/zeit">Zeiten</a></li>
+                <li><a href="/registrierung">Anmeldung</a></li>
                 <li>
                     <form>
                         <div class="input-field">

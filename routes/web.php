@@ -18,3 +18,15 @@ Route::get('/', function () {
 Route::get('/eingaben', function () {
     return view('pages.eingaben');
 });
+
+Route::get('/mannschaften', function () {
+    return view('pages.mannschaften');
+});
+
+Route::get('/zeit', function () {
+    return view('pages.zeit');
+});
+
+Route::get('/registrierung', function () {
+    return view('pages.registrierung');
+});

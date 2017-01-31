@@ -26,7 +26,7 @@
                     <label for="mannschaften">Mannschaften</label>
                 </div>
                 <div class="input-field col s6">
-                    <input id="plaetze" type="number" class="validate">
+                    <input placeholder="Anzahl Plätze" id="plaetze" type="number" class="validate">
                     <label for="plaetze">Anzahl Plätze</label>
                 </div>
             </div>
@@ -43,29 +43,10 @@
                     <label>Turniermodus</label>
                 </div>
             </div>
-            <div class="row">
-                <form class="cols12">
-                    <div class="input-field col s7">
-                        <input placeholder="Spielbeginn" id="spielbeginn" type="time" class="validate">
-                        <label for="spielbeginn">Spielbeginn</label>
-                    </div>
-                </form>
-            </div>
-            <div class="row">
-                <div class="input-field col s12">
-                    <input id="email" type="email" class="validate">
-                    <label for="email">Email</label>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col s12">
-                    This is an inline input field:
-                    <div class="input-field inline">
-                        <input id="email" type="email" class="validate">
-                        <label for="email" data-error="wrong" data-success="right">Email</label>
-                    </div>
-                </div>
-            </div>
         </form>
+    <button class="btn-large disabled right" type="submit" name="action">Submit
+        <i class="material-icons right">send</i>
+    </button>
     </div>
+
 @stop
