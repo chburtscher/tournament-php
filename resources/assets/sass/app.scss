@@ -2,8 +2,10 @@
 // Fonts
 @import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
 
+@import "node_modules/materialize-css/sass/components/mixins";
+@import "node_modules/materialize-css/sass/components/color";
+
 // Variables
 @import "variables";
 
-// Bootstrap
 @import "node_modules/materialize-css/sass/materialize.scss";
