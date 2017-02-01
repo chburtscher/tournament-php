@@ -1,4 +1,4 @@
-@extends('layouts.full-width')
+@extends('layouts.public')
 
 @section('title')
     Turnierverwaltung
@@ -34,28 +34,44 @@
     <div class="row">
         <div class="container">
             <div class="col s12 m6">
-                <div class="card grey lighten-2">
+                <div class="card-panel teal lighten-3">
                     <div class="card-content black-text center">
-                        <span class="card-title">Ohne Anmeldung</span>
-                        <p>Hier kann die Turnierverwaltung ohne Anmeldung gestartet werden.</p>
+                        <span class="card-title">Bereits einen Benutzer?</span>
+                        <p>Dann direkt zum Benutzerbereich und alle Features nutzen.</p>
                     </div>
                     <div class="card-action center">
-                        <a href="/eingaben">Start</a>
+                        <a href="/login" class="waves-effect waves-light btn-large">Log-In</a>
                     </div>
                 </div>
             </div>
             <div class="col s12 m6">
-                <div class="card grey lighten-2">
+                <div class="card-panel teal lighten-3">
                     <div class="card-content black-text center">
-                        <span class="card-title">Mit Anmeldung</span>
-                        <p>Hier kann die Turnierverwaltung mit Anmeldung gestartet werden</p>
+                        <span class="card-title">Noch keinen Benutzer?</span>
+                        <p>Jetzt registrieren um die Features zu nutzen.</p>
                     </div>
                     <div class="card-action center">
-                        <a href="registrierung.html">Anmeldung</a>
+                        <a href="/signup" class="waves-effect waves-light btn-large">Sign-Up</a>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+    <div>
+        <img class="responsive-img" src="http://lorempixel.com/1920/920/sports/">
+        <h2 class="center">Informationen</h2>
+        <p class="center">Willst du mehr Informationen zur Turnierverwaltung?
+            <br>
+            <a href="/informationen" class="waves-effect waves-light btn-large">hier klicken</a>
+        </p>
+    </div>
+    <div>
+        <img class="responsive-img" src="http://lorempixel.com/1920/920/sports/2">
+        <h2 class="center">Preismodell</h2>
+        <p class="center">Möchtest du erfahren, was dich die Turnierverwaltung <kostet></kostet>?
+            <br>
+            <a href="/informationen" class="waves-effect waves-light btn-large">hier klicken</a>
+        </p>
     </div>
 
 @stop

@@ -9,11 +9,11 @@
         <div class="nav-wrapper">
             <a href="/" class="brand-logo left">Logo</a>
             <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-            <ul id="nav-mobile" class="left hide-on-med-and-down">
-                <li><a href="/eingaben">Eingaben</a></li>
-                <li><a href="/mannschaften">Mannschaften</a></li>
-                <li class="active"><a href="/zeit">Zeiten</a></li>
-                <li><a href="/registrierung">Anmeldung</a></li>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="/info">Informationen</a></li>
+                <li><a href="/preismodell">Preismodell</a></li>
+                <li><a href="/registrierung">Sign-Up</a></li>
+                <li><a href="/login" class="waves-effect waves-light btn-large">Log-In</a></li>
                 <li>
                     <form>
                         <div class="input-field">
