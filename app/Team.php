@@ -10,4 +10,8 @@ class Team extends Model
     {
         return $this->belongsTo('App\Tournament', 'tournament_id', 'id');
     }
+    public function game()
+    {
+        return $this->belongsToMany('App\Game');
+    }
 }

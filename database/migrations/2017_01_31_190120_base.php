@@ -16,7 +16,7 @@ class Base extends Migration
         Schema::create('tournaments', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->enum('mode', [ 'round-robin', 'groups' ]);
+            $table->enum('mode', ['round-robin', 'groups']);
             $table->integer('numberOfGroups')->nullable();
             $table->integer('numberOfTeams');
             $table->integer('numberOfFields');
@@ -33,6 +33,14 @@ class Base extends Migration
             $table->timestamps();
         });
 
+        Schema::create('game', function (Blueprint $table) {
+            $table->string('team1');
+            $table->string('team2');
+            $table->string('referee');
+            $table->string('winningTeam');
+            $table->string('fieldNumber');
+            $table->integer('winningPoints');
+        });
     }
 
     /**
@@ -44,6 +52,6 @@ class Base extends Migration
     {
         Schema::dropIfExists('tournaments');
         Schema::dropIfExists('teams');
-        Schema::dropIfExists('user');
+        Schema::dropIfExists('game');
     }
     }
