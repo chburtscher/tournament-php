@@ -18,8 +18,11 @@ class Base extends Migration
             $table->string('name');
             $table->enum('mode', [ 'round-robin', 'groups' ]);
             $table->integer('numberOfGroups')->nullable();
-
-            // Anzahl Mannschaften
+            $table->integer('numberOfTeams');
+            $table->integer('numberOfFields');
+            $table->time('startTime');
+            $table->time('timePerGame');
+            $table->string('formOfSport');
             $table->timestamps();
         });
 
@@ -29,6 +32,7 @@ class Base extends Migration
             $table->integer('tournament_id');
             $table->timestamps();
         });
+
     }
 
     /**
@@ -40,5 +44,6 @@ class Base extends Migration
     {
         Schema::dropIfExists('tournaments');
         Schema::dropIfExists('teams');
+        Schema::dropIfExists('user');
     }
-}
+    }

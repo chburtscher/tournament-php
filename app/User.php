@@ -27,3 +27,17 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 }
+
+class Tournament extends Model
+{
+
+    public function user()
+    {
+        return $this->hasMany('App\tournament');
+    }
+
+    public function tournament()
+    {
+        return $this->belongsToMany('App\tournament');
+    }
+}

@@ -10,4 +10,12 @@ class Tournament extends Model
     {
         return $this->hasMany('App\Team');
     }
+    public function user()
+    {
+        return $this->belongsTo('App\Tournament', 'user_id', 'id');
+    }
+    public function user()
+    {
+        return $this->belongsToMany('App\User');
+    }
 }
