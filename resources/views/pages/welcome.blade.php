@@ -34,7 +34,7 @@
     <div class="row">
         <div class="container">
             <div class="col s12 m6">
-                <div class="card-panel teal lighten-3">
+                <div class="card-panel amber lighten-3">
                     <div class="card-content black-text center">
                         <span class="card-title">Bereits einen Benutzer?</span>
                         <p>Dann direkt zum Benutzerbereich und alle Features nutzen.</p>
@@ -45,13 +45,13 @@
                 </div>
             </div>
             <div class="col s12 m6">
-                <div class="card-panel teal lighten-3">
+                <div class="card-panel amber lighten-3">
                     <div class="card-content black-text center">
                         <span class="card-title">Noch keinen Benutzer?</span>
                         <p>Jetzt registrieren um die Features zu nutzen.</p>
                     </div>
                     <div class="card-action center">
-                        <a href="/signup" class="waves-effect waves-light btn-large">Sign-Up</a>
+                        <a href="/register" class="waves-effect waves-light btn-large">Sign-Up</a>
                     </div>
                 </div>
             </div>

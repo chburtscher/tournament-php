@@ -1,11 +1,10 @@
-@extends('layouts.login')
+@extends('layouts.register')
 @include('home')
 
 @section('title')
-    Login
+    Registrierung
 @stop
 
 @section('content')
-
 
 @stop

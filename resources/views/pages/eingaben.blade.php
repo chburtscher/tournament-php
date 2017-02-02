@@ -7,7 +7,7 @@
 @section('content')
     <h1 class="center">Turnierparameter</h1>
     <div class="row">
-        <form class="cols12">
+        <form class="col s12">
             <div class="input-field col s7">
                 <input placeholder="Eingabe Sportart" id="sportart" type="text" class="validate">
                 <label for="sportart">Sportart</label>

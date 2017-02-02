@@ -27,6 +27,14 @@ Route::get('/zeit', function () {
     return view('pages.zeit');
 });
 
-Route::get('/registrierung', function () {
-    return view('pages.registrierung');
+Route::get('/register', function () {
+    return view('pages.register');
 });
+
+Route::get('/login', function () {
+    return view('pages.login');
+});
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
