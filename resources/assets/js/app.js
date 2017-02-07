@@ -33,7 +33,4 @@ $('#timepicker').pickatime({
     autoclose: false,
     twelvehour: false,
     default: '09:00:00'
-    afterDone: function(Element, Time) {
-        console.log(Element, Time);
-}),
-
+});

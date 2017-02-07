@@ -9,4 +9,8 @@
 @import "variables";
 
 @import "node_modules/materialize-css/sass/materialize.scss";
+//@import "node_modules/materialize-clockpicker/src/sass/clockpicker.scss";
 
+@import "node_modules/materialize-clockpicker/src/sass/components/variables";
+@import "node_modules/materialize-clockpicker/src/sass/components/primary";
+@import "node_modules/materialize-clockpicker/src/sass/components/dark";

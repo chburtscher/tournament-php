@@ -50,7 +50,7 @@ class Base extends Migration
 
         Schema::create('results', function (Blueprint $table) {
             $table->string('teams');
-            $table->integer('numberofGames');
+            $table->integer('numberOfGames');
             $table->integer('pointsPerGame');
 
     });

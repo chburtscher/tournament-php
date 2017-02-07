@@ -11,8 +11,8 @@
             <form class="col s12">
                 <div class="row">
                     <div class="input-field col s6">
-                        <label for="date-picker">Turnierbeginn</label>
-                        <input id="date-picker" data-default="09:00:00" type="time" class="timepicker" name="startTime">
+                        <label for="timepicker">Turnierbeginn</label>
+                        <input id="timepicker" data-default="09:00:00" type="time" class="timepicker" name="startTime">
                     </div>
                 </div>
                 <div class="row">
