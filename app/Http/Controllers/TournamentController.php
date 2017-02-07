@@ -30,6 +30,7 @@ class TournamentController extends Controller
         return Tournament::create([
             'name' => $data['name'],
             'mode' => $data['mode'],
+            'playMode' => $data['playMode'],
             'numberOfGroups' => $data['numberOfGroups'],
             'numberOfTeams' => $data['numberOfTeams'],
             'numberOfFields' => $data['numberOfFields'],

@@ -17,6 +17,7 @@ class Base extends Migration
             $table->increments('id');
             $table->string('name');
             $table->enum('mode', ['round-robin', 'groups']);
+            $table->enum('playMode', ['runningOutTheClock', 'twoSets', 'twoWinningSets', 'threeWinningSets']);
             $table->integer('numberOfGroups')->nullable();
             $table->integer('numberOfTeams');
             $table->integer('numberOfFields');
@@ -66,5 +67,6 @@ class Base extends Migration
         Schema::dropIfExists('teams');
         Schema::dropIfExists('game');
         Schema::dropIfExists('times');
+        Schema::dropIfExists('results');
     }
     }

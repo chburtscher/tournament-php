@@ -14,5 +14,7 @@
     "materialize-css": "^0.98.0",
     "vue": "^2.0.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "materialize-clockpicker": "^1.0.1"
+  }
 }

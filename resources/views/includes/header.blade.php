@@ -13,6 +13,7 @@
                 <li><a href="/eingaben">Eingaben</a></li>
                 <li><a href="/mannschaften">Mannschaften</a></li>
                 <li class="active"><a href="/zeit">Zeiten</a></li>
+                <li><a href="/ergebnisse">Ergebnisse</a></li>
                 <li><a href="/registrierung">Anmeldung</a></li>
                 <li>
                     <form>

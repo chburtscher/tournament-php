@@ -23,6 +23,6 @@ class Tournament extends Model
         return $this->hasMany('App\game');
     }
     protected $fillable = [
-        'name', 'mode', 'numberOfGroups', 'numberOfTeams', 'numberOfFields', 'startTime', 'timePerGame', 'formOfSport',
+        'name', 'mode', 'playMode', 'numberOfGroups', 'numberOfTeams', 'numberOfFields', 'formOfSport',
     ];
 }
