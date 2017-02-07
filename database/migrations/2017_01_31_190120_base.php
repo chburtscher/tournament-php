@@ -20,10 +20,14 @@ class Base extends Migration
             $table->integer('numberOfGroups')->nullable();
             $table->integer('numberOfTeams');
             $table->integer('numberOfFields');
-            $table->time('startTime');
-            $table->time('timePerGame');
             $table->string('formOfSport');
             $table->timestamps();
+        });
+
+        Schema::create('times', function (Blueprint $table) {
+            $table->increments('id');
+            $table->time('startTime');
+            $table->time('timePerGame');
         });
 
         Schema::create('teams', function (Blueprint $table) {
@@ -43,12 +47,12 @@ class Base extends Migration
             $table->integer('winningPoints');
         });
 
-        Schema::create('results' function (Blueprint $table) {
+        Schema::create('results', function (Blueprint $table) {
             $table->string('teams');
             $table->integer('numberofGames');
             $table->integer('pointsPerGame');
 
-    })
+    });
     }
 
     /**
@@ -61,5 +65,6 @@ class Base extends Migration
         Schema::dropIfExists('tournaments');
         Schema::dropIfExists('teams');
         Schema::dropIfExists('game');
+        Schema::dropIfExists('times');
     }
     }

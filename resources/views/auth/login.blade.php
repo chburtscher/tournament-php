@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col m8 offset-m2">
                 <h4 class="center">Login</h4>
-                    <div class="form-horizontal" role="form" method="POST" action="{{ url('/login') }}">
+                    <form class="form-horizontal" role="form" method="POST" action="{{ url('/login') }}">
                         {{ csrf_field() }}
 
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
@@ -42,7 +42,7 @@
                                 <input type="checkbox" id="remember" {{ old('remember') ? 'checked' : '' }}/>
                                     <label for="remember">Remember Me</label>
                             </p>
-                            </div>
+                            </form>
                         </form>
 
                         <div class="form-group">

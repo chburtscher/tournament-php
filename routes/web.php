@@ -15,10 +15,6 @@ Route::get('/', function () {
     return view('pages.welcome');
 });
 
-Route::get('/eingaben', function () {
-    return view('pages.eingaben');
-});
-
 Route::get('/mannschaften', function () {
     return view('pages.mannschaften');
 });
@@ -27,14 +23,11 @@ Route::get('/zeit', function () {
     return view('pages.zeit');
 });
 
-Route::get('/register', function () {
-    return view('pages.register');
-});
-
-Route::get('/login', function () {
-    return view('pages.login');
-});
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+Route::get('/eingaben', 'TournamentController@showCreationForm');
+
+Route::post('/eingaben', 'TournamentController@createTournament');
+
