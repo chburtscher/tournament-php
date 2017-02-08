@@ -1,16 +1,11 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: cbellmann
- * Date: 07.02.17
- * Time: 08:11
- */
 
 namespace App\Http\Controllers;
 
 
 use App\Times;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Route;
 use Illuminate\Support\Facades\Validator;
 
 class TimesController extends Controller
@@ -21,7 +16,10 @@ class TimesController extends Controller
     public function createTimes(Request $request){
         $this->validator($request->all())->validate();
         $this->create($request->all());
-        redirect('/mannschaften');
+        Route::get('/tournament/{$id}', function ($id) {
+            return '/tournament'. $id;
+        });
+        return redirect('/mannschaften');
     }
     protected function validator(array $data)
     {

@@ -17,7 +17,7 @@
                 </div>
                 <div class="row">
                     <div class="input-field col s6">
-                        <input placeholder="Spielzeit pro Match" id="spielzeit" type="datetime" class="validate" name="timePerGame">
+                        <input placeholder="Spielzeit pro Match" id="spielzeit" type="number" class="validate" name="timePerGame">
                         <label for="spielzeit">Spielzeit pro Match</label>
                     </div>
                 </div>

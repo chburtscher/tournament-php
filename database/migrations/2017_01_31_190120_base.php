@@ -28,7 +28,7 @@ class Base extends Migration
         Schema::create('times', function (Blueprint $table) {
             $table->increments('id');
             $table->time('startTime');
-            $table->time('timePerGame');
+            $table->integer('timePerGame');
         });
 
         Schema::create('teams', function (Blueprint $table) {
