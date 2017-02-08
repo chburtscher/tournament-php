@@ -8,7 +8,8 @@
     <h1 class="center">Zeit</h1>
     <div class="container">
         <div class="row">
-            <form class="col s12">
+            <form class="col s12" method="POST">
+                {{ csrf_field() }}
                 <div class="row">
                     <div class="input-field col s6">
                         <label for="timepicker">Turnierbeginn</label>

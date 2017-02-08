@@ -28,9 +28,9 @@ Route::get('/eingaben', 'TournamentController@showCreationForm');
 
 Route::post('/eingaben', 'TournamentController@createTournament');
 
-Route::get('/zeit', 'TimesController@showTimesForm');
+Route::get('/tournament/{id}/zeit', 'TimesController@showTimesForm');
 
-Route::post('/zeit', 'TimesController@createTimes');
+Route::post('/tournament/{id}/zeit', 'TimesController@createTimes');
 
 Route::get('/ergebnisse', 'GameController@showGameForm');
 

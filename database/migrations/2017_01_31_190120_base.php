@@ -22,13 +22,9 @@ class Base extends Migration
             $table->integer('numberOfTeams');
             $table->integer('numberOfFields');
             $table->string('formOfSport');
+            $table->time('startTime')->nullable();
+            $table->integer('timePerGame')->nullable();
             $table->timestamps();
-        });
-
-        Schema::create('times', function (Blueprint $table) {
-            $table->increments('id');
-            $table->time('startTime');
-            $table->integer('timePerGame');
         });
 
         Schema::create('teams', function (Blueprint $table) {

@@ -14,10 +14,8 @@ class TournamentController extends Controller
     }
     public function createTournament(Request $request){
         $this->validator($request->all())->validate();
-        $this->create($request->all());
-        return redirect('/zeit');
-
-
+        $tournament = $this->create($request->all());
+        return redirect('/tournament/' . $tournament->id . '/zeit');
     }
     protected function validator(array $data)
     {

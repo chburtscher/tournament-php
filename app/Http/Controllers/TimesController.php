@@ -3,9 +3,8 @@
 namespace App\Http\Controllers;
 
 
-use App\Times;
+use App\Tournament;
 use Illuminate\Http\Request;
-use Illuminate\Routing\Route;
 use Illuminate\Support\Facades\Validator;
 
 class TimesController extends Controller
@@ -13,12 +12,9 @@ class TimesController extends Controller
     public function showTimesForm(){
         return view('pages.zeit');
     }
-    public function createTimes(Request $request){
+    public function createTimes(Request $request, $id){
         $this->validator($request->all())->validate();
-        $this->create($request->all());
-        Route::get('/tournament/{$id}', function ($id) {
-            return '/tournament'. $id;
-        });
+        $this->create($id, $request->all());
         return redirect('/mannschaften');
     }
     protected function validator(array $data)
@@ -27,11 +23,13 @@ class TimesController extends Controller
             //to-do: implement rules
         ]);
     }
-    protected function create(array $data)
+    protected function create($id, array $data)
     {
-        return Times::create([
-            'startTime' => $data['startTime'],
-            'timePerGame' => $data['timePerGame']
-        ]);
+        $turnier = Tournament::find($id);
+        $turnier->startTime = $data['startTime'];
+        $turnier->timePerGame = $data['timePerGame'];
+        $turnier->save();
+
+        return $turnier;
     }
 }
