@@ -68,7 +68,7 @@
     <div>
         <img class="responsive-img" src="http://lorempixel.com/1920/920/sports/2">
         <h2 class="center">Preismodell</h2>
-        <p class="center">Möchtest du erfahren, was dich die Turnierverwaltung <kostet></kostet>?
+        <p class="center">Möchtest du erfahren, was dich die Turnierverwaltung kostet?
             <br>
             <a href="/informationen" class="waves-effect waves-light btn-large">hier klicken</a>
         </p>

@@ -34,3 +34,7 @@ $('#timepicker').pickatime({
     twelvehour: false,
     default: '09:00:00'
 });
+
+$( document ).ready(function(){});
+
+$(".button-collapse").sideNav();

@@ -7,14 +7,13 @@
 <div class="navbar-fixed">
     <nav>
         <div class="nav-wrapper">
-            <a href="/" class="brand-logo left">Logo</a>
             <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+            <a href="/" class="brand-logo center">Logo</a>
             <ul id="nav-mobile" class="left hide-on-med-and-down">
                 <li><a href="/eingaben">Eingaben</a></li>
                 <li><a href="/mannschaften">Mannschaften</a></li>
                 <li class="active"><a href="/zeit">Zeiten</a></li>
                 <li><a href="/ergebnisse">Ergebnisse</a></li>
-                <li><a href="/registrierung">Anmeldung</a></li>
                 <li>
                     <form>
                         <div class="input-field">
@@ -24,6 +23,12 @@
                         </div>
                     </form>
                 </li>
+            </ul>
+            <ul class="side-nav" id="mobile-demo">
+                <li><a href="/eingaben">Eingaben</a></li>
+                <li><a href="/mannschaften">Mannschaften</a></li>
+                <li><a href="/zeit">Zeiten</a></li>
+                <li><a href="/ergebnisse">Ergebnisse</a></li>
             </ul>
         </div>
     </nav>
