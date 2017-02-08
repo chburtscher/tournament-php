@@ -53,9 +53,9 @@
                     <div class="input-field col m4 s12">
                         <select name="playMode">
                             <option value="" disabled selected>Choose your option</option>
-                            <option value="1">Spiel auf Zeit</option>
-                            <option value="2">2 Sätze</option>
-                            <option value="3">2 Gewinnsätze</option>
+                            <option value="time">Spiel auf Zeit</option>
+                            <option value="twoSets">2 Sätze</option>
+                            <option value="threeSets">2 Gewinnsätze</option>
                             <option value="4">3 Gewinnsätze</option>
                         </select>
                         <label>Spielmodus</label>
