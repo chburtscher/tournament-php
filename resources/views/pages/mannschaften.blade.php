@@ -9,10 +9,11 @@
 <h1 class="center">Mannschaften</h1>
 
 <div class="row">
-    <form class="col s12">
+    <form class="col s12" method="POST">
+        {{ csrf_field() }}
         <div class="row">
             <div class="input-field col m6 s12">
-                <textarea id="textarea1" class="materialize-textarea"></textarea>
+                <textarea id="textarea1" class="materialize-textarea" name="name"></textarea>
                 <label for="textarea1">Mannschaft</label>
             </div>
             <div class="input-field col m6 s12">
