@@ -13,7 +13,7 @@
             {{ csrf_field() }}
             <div class="row">
                 <div class="input-field col m6 s12">
-                    @for($count=1; $count<='numberOfTeams'; $count++)
+                    @for($count=1; $count<=100; $count++)
                         <textarea id="textarea1" class="materialize-textarea" name="name[{{$count}}]"></textarea>
                         <label for="textarea1">Mannschaft</label>
                     @endfor
