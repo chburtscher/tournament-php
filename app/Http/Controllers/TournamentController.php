@@ -10,12 +10,12 @@ use Illuminate\Support\Facades\Validator;
 class TournamentController extends Controller
 {
     public function showCreationForm(){
-        return view('pages.eingaben');
+        return view('pages.entries');
     }
     public function createTournament(Request $request){
         $this->validator($request->all())->validate();
         $tournament = $this->create($request->all());
-        return redirect('/tournament/' . $tournament->id . '/zeit');
+        return redirect('/tournament/' . $tournament->id . '/time');
     }
     protected function validator(array $data)
     {

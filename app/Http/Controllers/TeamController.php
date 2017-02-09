@@ -10,13 +10,13 @@ use Illuminate\Support\Facades\Validator;
 class TeamController extends Controller
 {
     public function showTeamsForm($id){
-        return view('pages.mannschaften');
+        return view('pages.teams');
     }
 
     public function createTeams(Request $request, $id){
         $this->validator($request->all())->validate();
         $this->create($id, $request->all());
-        return redirect('/review');
+        return redirect('/tournament/' . $tournament->id . '/review');
     }
 
     protected function validator(array $data)
@@ -28,10 +28,10 @@ class TeamController extends Controller
 
     protected function create($id, array $data)
     {
-        $turnier = Tournament::find($id);
+        $turnier = Tournament::find($id, 'numberOfTeams');
         $turnier->team = $data['name'];
         $turnier->save();
 
-        return view('pages.mannschaften', ['numberOfTeams' => $turnier -> numberOfTeams]);
+        return view('pages.teams', ['count' => $turnier -> count]);
     }
 }

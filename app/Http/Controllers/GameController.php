@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Validator;
 class GameController extends Controller
 {
     public function showGameForm(){
-        return view('pages.ergebnisse');
+        return view('pages.results');
     }
     public function createGame(Request $request){
         $this->validator($request->all())->validate();

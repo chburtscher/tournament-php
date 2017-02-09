@@ -1,7 +1,7 @@
 @extends('layouts.public')
 
 @section('title')
-    Turnierverwaltung
+    Tournament-Management
 @stop
 
 @section('content')
@@ -62,7 +62,7 @@
         <h2 class="center">Informationen</h2>
         <p class="center">Willst du mehr Informationen zur Turnierverwaltung?
             <br>
-            <a href="/informationen" class="waves-effect waves-light btn-large">hier klicken</a>
+            <a href="/info" class="waves-effect waves-light btn-large">hier klicken</a>
         </p>
     </div>
     <div>
@@ -70,7 +70,7 @@
         <h2 class="center">Preismodell</h2>
         <p class="center">Möchtest du erfahren, was dich die Turnierverwaltung kostet?
             <br>
-            <a href="/informationen" class="waves-effect waves-light btn-large">hier klicken</a>
+            <a href="/pricing" class="waves-effect waves-light btn-large">hier klicken</a>
         </p>
     </div>
 

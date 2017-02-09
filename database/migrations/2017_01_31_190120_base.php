@@ -62,7 +62,6 @@ class Base extends Migration
         Schema::dropIfExists('tournaments');
         Schema::dropIfExists('teams');
         Schema::dropIfExists('game');
-        Schema::dropIfExists('times');
         Schema::dropIfExists('results');
     }
     }

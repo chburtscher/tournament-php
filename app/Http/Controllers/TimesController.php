@@ -10,13 +10,13 @@ use Illuminate\Support\Facades\Validator;
 class TimesController extends Controller
 {
     public function showTimesForm(){
-        return view('pages.zeit');
+        return view('pages.time');
     }
 
     public function createTimes(Request $request, $id){
         $this->validator($request->all())->validate();
-        $this->create($id, $request->all());
-        return redirect('/mannschaften');
+        $tournament = $this->create($id, $request->all());
+        return redirect('/tournament/' . $tournament->id . '/teams');
     }
 
     protected function validator(array $data)

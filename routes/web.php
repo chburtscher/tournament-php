@@ -19,19 +19,19 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
-Route::get('/eingaben', 'TournamentController@showCreationForm');
+Route::get('/entries', 'TournamentController@showCreationForm');
 
-Route::post('/eingaben', 'TournamentController@createTournament');
+Route::post('/entries', 'TournamentController@createTournament');
 
-Route::get('/tournament/{id}/zeit', 'TimesController@showTimesForm');
+Route::get('/tournament/{id}/time', 'TimesController@showTimesForm');
 
-Route::post('/tournament/{id}/zeit', 'TimesController@createTimes');
+Route::post('/tournament/{id}/time', 'TimesController@createTimes');
 
-Route::get('/tournament/{id}/mannschaften', 'TeamController@showTeamsForm');
+Route::get('/tournament/{id}/teams', 'TeamController@showTeamsForm');
 
-Route::post('/tournament/{id}/mannschaften', 'TeamController@createTeams');
+Route::post('/tournament/{id}/teams', 'TeamController@createTeams');
 
-Route::get('/ergebnisse', 'GameController@showGameForm');
+Route::get('/results', 'GameController@showGameForm');
 
-Route::post('/ergebnisse', 'GameController@createGame');
+Route::post('/results', 'GameController@createGame');
 

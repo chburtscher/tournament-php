@@ -1,7 +1,7 @@
 @extends('layouts.default')
 
 @section('title')
-    Zeit
+    Time
 @stop
 
 @section('content')

@@ -1,7 +1,7 @@
-@extends('layouts.default')
+@extends('layouts.public')
 
 @section('title')
-    Ergebnisse
+    Pricing
 @stop
 
 @section('content')
