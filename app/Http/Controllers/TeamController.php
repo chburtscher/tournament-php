@@ -32,6 +32,6 @@ class TeamController extends Controller
         $turnier->team = $data['name'];
         $turnier->save();
 
-        return $turnier;
+        return view('pages.mannschaften', ['numberOfTeams' => $turnier -> numberOfTeams]);
     }
 }
