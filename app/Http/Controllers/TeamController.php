@@ -10,7 +10,10 @@ use Illuminate\Support\Facades\Validator;
 class TeamController extends Controller
 {
     public function showTeamsForm($id){
-        return view('pages.teams');
+        // Load number of teams for this tournament
+        $tournament = Tournament::find($id);
+
+        return view('pages.teams', [ 'numberOfTeams' => $tournament->numberOfTeams]);
     }
 
     public function createTeams(Request $request, $id){
@@ -28,10 +31,6 @@ class TeamController extends Controller
 
     protected function create($id, array $data)
     {
-        $turnier = Tournament::find($id, 'numberOfTeams');
-        $turnier->team = $data['name'];
-        $turnier->save();
-
-        return view('pages.teams', ['numberOfTeams' => $turnier -> count]);
+        // Hier wird später das Speichern der Teams implementiert
     }
 }
