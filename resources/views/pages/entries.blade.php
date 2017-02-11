@@ -7,7 +7,7 @@
 @section('content')
     <h1 class="center">Turnierparameter</h1>
     <div class="row">
-        <form method="POST" action="{{url('/eingaben')}}">
+        <form method="POST" action="{{url('/entries')}}">
             {{ csrf_field() }}
             <div class="row">
                 <div class="col s12">

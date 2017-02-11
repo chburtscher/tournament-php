@@ -10,10 +10,10 @@
             <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
             <a href="/" class="brand-logo center">Logo</a>
             <ul id="nav-mobile" class="left hide-on-med-and-down">
-                <li><a href="/eingaben">Eingaben</a></li>
-                <li><a href="/mannschaften">Mannschaften</a></li>
-                <li class="active"><a href="/zeit">Zeiten</a></li>
-                <li><a href="/ergebnisse">Ergebnisse</a></li>
+                <li><a href="/entries">Eingaben</a></li>
+                <li><a href="/teams">Mannschaften</a></li>
+                <li class="active"><a href="/time">Zeiten</a></li>
+                <li><a href="/results">Ergebnisse</a></li>
                 <li>
                     <form>
                         <div class="input-field">
@@ -25,10 +25,10 @@
                 </li>
             </ul>
             <ul class="side-nav" id="mobile-demo">
-                <li><a href="/eingaben">Eingaben</a></li>
-                <li><a href="/mannschaften">Mannschaften</a></li>
-                <li><a href="/zeit">Zeiten</a></li>
-                <li><a href="/ergebnisse">Ergebnisse</a></li>
+                <li><a href="/entries">Eingaben</a></li>
+                <li><a href="/teams">Mannschaften</a></li>
+                <li><a href="/time">Zeiten</a></li>
+                <li><a href="/result">Ergebnisse</a></li>
             </ul>
         </div>
     </nav>

@@ -1,14 +1,15 @@
 @extends('layouts.default')
 
 @section('title')
-    Zeit
+    Time
 @stop
 
 @section('content')
     <h1 class="center">Zeit</h1>
     <div class="container">
         <div class="row">
-            <form class="col s12">
+            <form class="col s12" method="POST">
+                {{ csrf_field() }}
                 <div class="row">
                     <div class="input-field col s6">
                         <label for="timepicker">Turnierbeginn</label>
@@ -17,7 +18,7 @@
                 </div>
                 <div class="row">
                     <div class="input-field col s6">
-                        <input placeholder="Spielzeit pro Match" id="spielzeit" type="datetime" class="validate" name="timePerGame">
+                        <input placeholder="Spielzeit pro Match" id="spielzeit" type="number" class="validate" name="timePerGame">
                         <label for="spielzeit">Spielzeit pro Match</label>
                     </div>
                 </div>

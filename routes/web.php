@@ -15,24 +15,23 @@ Route::get('/', function () {
     return view('pages.welcome');
 });
 
-Route::get('/mannschaften', function () {
-    return view('pages.mannschaften');
-});
-
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
-Route::get('/eingaben', 'TournamentController@showCreationForm');
+Route::get('/entries', 'TournamentController@showCreationForm');
 
-Route::post('/eingaben', 'TournamentController@createTournament');
+Route::post('/entries', 'TournamentController@createTournament');
 
-Route::get('/zeit', 'TimesController@showTimesForm');
+Route::get('/tournament/{id}/time', 'TimesController@showTimesForm');
 
-Route::post('/zeit', 'TimesController@createTimes');
+Route::post('/tournament/{id}/time', 'TimesController@createTimes');
 
-Route::get('/ergebnisse', 'GameController@showGameForm');
+Route::get('/tournament/{id}/teams', 'TeamController@showTeamsForm');
 
-Route::post('/ergebnisse', 'GameController@createGame');
+Route::post('/tournament/{id}/teams', 'TeamController@createTeams');
+
+Route::get('/results', 'GameController@showGameForm');
+
+Route::post('/results', 'GameController@createGame');
 

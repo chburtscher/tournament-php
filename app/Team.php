@@ -14,4 +14,7 @@ class Team extends Model
     {
         return $this->belongsToMany('App\Game');
     }
+    protected $fillable = [
+        'name', 'tournament_id',
+    ];
 }
