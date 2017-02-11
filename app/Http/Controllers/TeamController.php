@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 
+use App\Team;
 use App\Tournament;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
@@ -19,7 +20,7 @@ class TeamController extends Controller
     public function createTeams(Request $request, $id){
         $this->validator($request->all())->validate();
         $this->create($id, $request->all());
-        return redirect('/tournament/' . $tournament->id . '/review');
+        return redirect('/tournament/' . $id . '/review');
     }
 
     protected function validator(array $data)
@@ -31,6 +32,11 @@ class TeamController extends Controller
 
     protected function create($id, array $data)
     {
-        // Hier wird später das Speichern der Teams implementiert
+        foreach ($data['teams'] as $team) {
+            Team::create([
+                'name' => $team,
+                'tournament_id' => $id
+            ]);
+        }
     }
 }
