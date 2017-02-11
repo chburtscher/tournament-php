@@ -35,3 +35,7 @@ Route::get('/results', 'GameController@showGameForm');
 
 Route::post('/results', 'GameController@createGame');
 
+Route::get('/tournament/{id}/edit', 'TournamentController@showEditForm');
+
+Route::post('/tournament/{id}/edit', 'TournamentController@editTournament');
+

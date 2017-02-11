@@ -10,7 +10,8 @@ use Illuminate\Support\Facades\Validator;
 class TournamentController extends Controller
 {
     public function showCreationForm(){
-        return view('pages.entries');
+        $tournament = new Tournament();
+        return view('pages.entries', ['tournament' => $tournament]);
     }
     public function createTournament(Request $request){
         $this->validator($request->all())->validate();
@@ -34,5 +35,24 @@ class TournamentController extends Controller
             'numberOfFields' => $data['numberOfFields'],
             'formOfSport' => $data['formOfSport'],
         ]);
+    }
+    public function showEditForm($id) {
+        $tournament = Tournament::find($id);
+        return view('pages.entries', [ 'tournament' => $tournament ]);
+    }
+
+    public function editTournament(Request $request, $id){
+        $this->validator($request->all())->validate();
+        $tournament = $this->update($id, $request->all());
+        return redirect('/tournament/' . $tournament->id);
+    }
+
+    protected function update($id, array $data)
+    {
+        $tournament = Tournament::find($id);
+        $tournament->formOfSport = $data['formOfSport'];
+        $tournament->save();
+
+        return $tournament;
     }
 }

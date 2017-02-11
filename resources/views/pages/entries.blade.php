@@ -7,13 +7,13 @@
 @section('content')
     <h1 class="center">Turnierparameter</h1>
     <div class="row">
-        <form method="POST" action="{{url('/entries')}}">
+        <form method="POST">
             {{ csrf_field() }}
             <div class="row">
                 <div class="col s12">
                     <div class="input-field col s7">
                         <input placeholder="Eingabe Sportart" id="sportart" type="text" class="validate"
-                               name="formOfSport">
+                               name="formOfSport" value="{{$tournament->formOfSport}}">
                         <label for="sportart">Sportart</label>
                     </div>
                 </div>

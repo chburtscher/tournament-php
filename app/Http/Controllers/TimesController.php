@@ -28,11 +28,11 @@ class TimesController extends Controller
 
     protected function create($id, array $data)
     {
-        $turnier = Tournament::find($id);
-        $turnier->startTime = $data['startTime'];
-        $turnier->timePerGame = $data['timePerGame'];
-        $turnier->save();
+        $tournament = Tournament::find($id);
+        $tournament->startTime = $data['startTime'];
+        $tournament->timePerGame = $data['timePerGame'];
+        $tournament->save();
 
-        return $turnier;
+        return $tournament;
     }
 }

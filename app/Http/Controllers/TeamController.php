@@ -20,7 +20,7 @@ class TeamController extends Controller
     public function createTeams(Request $request, $id){
         $this->validator($request->all())->validate();
         $this->create($id, $request->all());
-        return redirect('/tournament/' . $id . '/review');
+        return redirect('/tournament/' . $id );
     }
 
     protected function validator(array $data)
