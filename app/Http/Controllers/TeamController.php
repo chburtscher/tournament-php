@@ -10,22 +10,24 @@ use Illuminate\Support\Facades\Validator;
 
 class TeamController extends Controller
 {
-    public function showTeamsForm($id){
+    public function showTeamsForm($id)
+    {
         // Load number of teams for this tournament
         $tournament = Tournament::find($id);
 
-        return view('pages.teams', [ 'numberOfTeams' => $tournament->numberOfTeams]);
+        return view('pages.teams', ['numberOfTeams' => $tournament->numberOfTeams]);
     }
 
-    public function createTeams(Request $request, $id){
+    public function createTeams(Request $request, $id)
+    {
         $this->validator($request->all())->validate();
         $this->create($id, $request->all());
-        return redirect('/tournament/' . $id );
+        return redirect('/tournament/' . $id);
     }
 
     protected function validator(array $data)
     {
-        return Validator::make($data,[
+        return Validator::make($data, [
             //to-do: implement-rules
         ]);
     }
@@ -39,4 +41,26 @@ class TeamController extends Controller
             ]);
         }
     }
+
+    public function showEditFormTeams($id)
+    {
+        $tournament = Tournament::find($id);
+        return view('pages.teams', ['tournament' => $tournament]);
+    }
+
+    public function editTeams(Request $request, $id){
+        $this->validator($request->all())->validate();
+        $tournament = $this->update($id, $request->all());
+        return redirect('/tournament/' . $tournament->id);
+    }
+
+    protected function updateTeams($id, array $data)
+    {
+        $tournament = Tournament::find($id);
+        $tournament->name = $team;
+        $tournament->save();
+
+        return $tournament;
+    }
+
 }
