@@ -15,6 +15,14 @@ Route::get('/', function () {
     return view('pages.welcome');
 });
 
+Route::get('/info', function () {
+    return view('pages.info');
+});
+
+Route::get('/pricing', function () {
+    return view('pages.pricing');
+});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
