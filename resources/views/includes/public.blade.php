@@ -7,22 +7,13 @@
 <div class="navbar-fixed">
     <nav>
         <div class="nav-wrapper">
-            <a href="/" class="brand-logo center">Logo</a>
             <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+            <a href="/" class="brand-logo left">Logo</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li><a href="/info">Informationen</a></li>
                 <li><a href="/pricing">Preismodell</a></li>
                 <li><a href="/register">Sign-Up</a></li>
                 <li><a href="/login" class="waves-effect waves-light btn-large">Log-In</a></li>
-                <li>
-                    <form>
-                        <div class="input-field">
-                            <input id="search" type="search" required>
-                            <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-                            <i class="material-icons">close</i>
-                        </div>
-                    </form>
-                </li>
             </ul>
             <ul class="side-nav" id="mobile-demo">
                 <li><a href="/info">Informationen</a></li>

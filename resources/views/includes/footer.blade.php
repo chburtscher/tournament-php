@@ -1,15 +1,12 @@
 <footer class="page-footer">
     <div class="row">
-        <div class="footer-adress col m2 s12">
-            <p>Muster GmbH<br>Musterstraße 4<br>1111 Musterstadt</p>
-        </div>
         <div class="footer-contact col m6 s12">
-            <i class="material-icons">email</i> <a href="mailto:example@example.com">example@example
+            <i class="tiny material-icons">email</i> <a href="mailto:example@example.com">example@example
                 .com</a>
             <br>
-            <i class="material-icons">contact_phone</i> <a href="tel:+43557479207">+43 5574 79207</a>
+            <i class="tiny material-icons">contact_phone</i> <a href="tel:+43557479207">+43 5574 79207</a>
         </div>
-        <div class="footer-info col m4 s12 right-align">
+        <div class="footer-info col m6 s12 right-align">
             <a href="<a href="impressum.html">Impressum</a>
             <br>
             <a href="agb.html">AGB</a>
