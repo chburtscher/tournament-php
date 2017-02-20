@@ -20,7 +20,8 @@
             </div>
             <div class="cols12">
                 <div class="input-field col s7">
-                    <input placeholder="Turniername" id="turniername" type="text" class="validate" name="name">
+                    <input placeholder="Turniername" id="turniername" type="text" class="validate"
+                           name="name" value="{{$tournament->name}}">
                     <label for="turniername">Turniername</label>
                 </div>
             </div>
@@ -29,19 +30,19 @@
                 <div class="row">
                     <div class="input-field col m4 s6">
                         <input placeholder="Anzahl Mannschaften" id="mannschaften" type="number" class="validate"
-                               name="numberOfTeams">
+                               name="numberOfTeams" value="{{$tournament->numberOfTeams}}">
                         <label for="mannschaften">Mannschaften</label>
                     </div>
                     <div class="input-field col m4 s6">
                         <input placeholder="Anzahl Plätze" id="plaetze" type="number" class="validate"
-                               name="numberOfFields">
+                               name="numberOfFields" value="{{$tourmament->numberOfFields}}">
                         <label for="plaetze">Anzahl Plätze</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col m4 s6">
                         <select name="mode">
-                            <option value="" disabled selected>Choose your option</option>
+                            <option value="{{$tournament->mode}}" disabled selected>Choose your option</option>
                             <option value="round-robin">Alle gegen alle</option>
                             <option value="groups">2 Gruppen mit Zwischenrunde</option>
                             <option value="3">2 Gruppen ohne Zwischenrunde</option>
@@ -52,7 +53,7 @@
                     </div>
                     <div class="input-field col m4 s12">
                         <select name="playMode">
-                            <option value="" disabled selected>Choose your option</option>
+                            <option value="{{$tournament->playMode}}" disabled selected>Choose your option</option>
                             <option value="time">Spiel auf Zeit</option>
                             <option value="twoSets">2 Sätze</option>
                             <option value="threeSets">2 Gewinnsätze</option>
@@ -64,7 +65,7 @@
                 <div class="row">
                     <div class="input-field col m4 s6">
                         <input placeholder="Anzahl Gruppen" id="gruppen" type="number" class="validate"
-                               name="numberOfGroups">
+                               name="numberOfGroups" value="{{$tournament->numberOfGroups}}">
                         <label for="gruppen">Anzahl Gruppen</label>
                     </div>
                 </div>

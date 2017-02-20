@@ -50,6 +50,12 @@ class TournamentController extends Controller
     protected function update($id, array $data)
     {
         $tournament = Tournament::find($id);
+        $tournament->name = $data['name'];
+        $tournament->name = $data['mode'];
+        $tournament->name = $data['playMode'];
+        $tournament->name = $data['numberOfGroups'];
+        $tournament->name = $data['numberOfTeams'];
+        $tournament->name = $data['numberOfFields'];
         $tournament->formOfSport = $data['formOfSport'];
         $tournament->save();
 
