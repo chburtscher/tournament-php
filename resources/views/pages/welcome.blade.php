@@ -39,7 +39,7 @@
                         <span class="card-title">Bereits einen Benutzer?</span>
                         <p>Dann direkt zum Benutzerbereich und alle Features nutzen.</p>
                     </div>
-                    <div class="card-action center">
+                    <div class="card-action login center">
                         <a href="/login" class="waves-effect waves-light btn-large">Log-In</a>
                     </div>
                 </div>
@@ -50,23 +50,23 @@
                         <span class="card-title">Noch keinen Benutzer?</span>
                         <p>Jetzt registrieren um die Features zu nutzen.</p>
                     </div>
-                    <div class="card-action center">
+                    <div class="card-action register center">
                         <a href="/register" class="waves-effect waves-light btn-large">Sign-Up</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div>
-        <img class="responsive-img" src="http://lorempixel.com/1920/920/sports/">
+    <div class="info">
+        <img class="responsive-img" src="http://lorempixel.com/1920/700/sports/">
         <h2 class="center">Informationen</h2>
         <p class="center">Willst du mehr Informationen zur Turnierverwaltung?
             <br>
             <a href="/info" class="waves-effect waves-light btn-large">hier klicken</a>
         </p>
     </div>
-    <div>
-        <img class="responsive-img" src="http://lorempixel.com/1920/920/sports/2">
+    <div class="pricing">
+        <img class="responsive-img" src="http://lorempixel.com/1920/700/sports/2">
         <h2 class="center">Preismodell</h2>
         <p class="center">Möchtest du erfahren, was dich die Turnierverwaltung kostet?
             <br>

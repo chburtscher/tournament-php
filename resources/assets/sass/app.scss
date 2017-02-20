@@ -15,3 +15,59 @@
 @import "node_modules/materialize-clockpicker/src/sass/components/primary";
 @import "node_modules/materialize-clockpicker/src/sass/components/dark";
 
+
+.card-panel {
+  border-radius: 10px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.card-title {
+  font-size: 25px;
+}
+
+.card-content p {
+  font-size: 18px;
+}
+
+.card-panel .btn-large {
+  padding: 0px 60px 15px 60px;
+  font-size: 20px;
+}
+
+.info h2 {
+  margin-top: 100px;
+}
+
+.info p {
+  padding: 0px 10px 0px 10px;
+  font-size: 18px;
+  margin-bottom: 100px;
+}
+
+.info a {
+  margin-top: 20px;
+}
+
+.info .btn-large {
+  padding: 0px 60px 15px 60px;
+  font-size: 20px;
+}
+.pricing h2 {
+  margin-top: 100px;
+}
+
+.pricing p {
+  padding: 0px 10px 0px 10px;
+  font-size: 18px;
+  margin-bottom: 100px;
+}
+
+.pricing a {
+  margin-top: 20px;
+}
+
+.pricing .btn-large {
+  padding: 0px 60px 15px 60px;
+  font-size: 20px;
+}
