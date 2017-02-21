@@ -35,7 +35,7 @@
                     </div>
                     <div class="input-field col m4 s6">
                         <input placeholder="Anzahl Plätze" id="plaetze" type="number" class="validate"
-                               name="numberOfFields" value="{{$tourmament->numberOfFields}}">
+                               name="numberOfFields" value="{{$tournament->numberOfFields}}">
                         <label for="plaetze">Anzahl Plätze</label>
                     </div>
                 </div>
