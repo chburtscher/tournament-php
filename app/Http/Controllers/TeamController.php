@@ -14,7 +14,7 @@ class TeamController extends Controller
         // Load number of teams for this tournament
         $tournament = Tournament::find($id);
 
-        return view('pages.teams', [ 'numberOfTeams' => $tournament->numberOfTeams]);
+        return view('pages.teams', [ 'tournament' => $tournament]);
     }
 
     public function createTeams(Request $request, $id){
@@ -32,7 +32,12 @@ class TeamController extends Controller
 
     protected function create($id, array $data)
     {
-        foreach ($data['teams'] as $team) {
+        foreach ($data['existingTeams'] as $teamId => $team) {
+            $teamObject = Team::find($teamId);
+            $teamObject->name = $team ;
+            $teamObject->save();
+        }
+        foreach ($data['newTeams'] as $team) {
             Team::create([
                 'name' => $team,
                 'tournament_id' => $id

@@ -39,7 +39,7 @@ Route::get('/tournament/{id}/teams', 'TeamController@showTeamsForm');
 
 Route::post('/tournament/{id}/teams', 'TeamController@createTeams');
 
-Route::get('tournament/{id}/overview', 'OverviewController@showOverviewForm');
+Route::get('/tournament/{id}/overview', 'OverviewController@showOverviewForm');
 
 Route::get('/results', 'GameController@showGameForm');
 
