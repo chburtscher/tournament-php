@@ -71,3 +71,45 @@
   padding: 0px 60px 15px 60px;
   font-size: 20px;
 }
+
+.container .entries {
+  font-size: 18px;
+  padding: 20px 20px 0px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 1em;
+}
+
+.container .entries .input-field .validate {
+  color: black;
+  font-size: 16px;
+  border-bottom: 0.5px solid #9e9e9e;
+}
+
+.container .time .input-field .validate {
+  color: black;
+  font-size: 16px;
+  border-bottom: 0.5px solid #9e9e9e;
+}
+
+.container .team .input-field .validate {
+  color: black;
+  font-size: 16px;
+  border-bottom: 0.5px solid #9e9e9e;
+}
+
+.container .time {
+  font-size: 18px;
+  padding: 20px 20px 0px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 1em;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.container .team {
+  font-size: 18px;
+  padding: 20px 20px 0px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 1em;
+  margin-bottom: 10px;
+}
