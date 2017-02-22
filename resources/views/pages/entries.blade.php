@@ -20,7 +20,8 @@
             </div>
             <div class="cols12">
                 <div class="input-field col s7">
-                    <input placeholder="Turniername" id="turniername" type="text" class="validate" name="name">
+                    <input placeholder="Turniername" id="turniername" type="text" class="validate"
+                           name="name" value="{{$tournament->name}}">
                     <label for="turniername">Turniername</label>
                 </div>
             </div>
@@ -29,12 +30,12 @@
                 <div class="row">
                     <div class="input-field col m4 s6">
                         <input placeholder="Anzahl Mannschaften" id="mannschaften" type="number" class="validate"
-                               name="numberOfTeams">
+                               name="numberOfTeams" value="{{$tournament->numberOfTeams}}">
                         <label for="mannschaften">Mannschaften</label>
                     </div>
                     <div class="input-field col m4 s6">
                         <input placeholder="Anzahl Plätze" id="plaetze" type="number" class="validate"
-                               name="numberOfFields">
+                               name="numberOfFields" value="{{$tournament->numberOfFields}}">
                         <label for="plaetze">Anzahl Plätze</label>
                     </div>
                 </div>
@@ -64,7 +65,7 @@
                 <div class="row">
                     <div class="input-field col m4 s6">
                         <input placeholder="Anzahl Gruppen" id="gruppen" type="number" class="validate"
-                               name="numberOfGroups">
+                               name="numberOfGroups" value="{{$tournament->numberOfGroups}}">
                         <label for="gruppen">Anzahl Gruppen</label>
                     </div>
                 </div>
