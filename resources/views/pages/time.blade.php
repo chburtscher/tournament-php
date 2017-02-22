@@ -13,12 +13,14 @@
                 <div class="row">
                     <div class="input-field col s6">
                         <label for="timepicker">Turnierbeginn</label>
-                        <input id="timepicker" data-default="09:00:00" type="time" class="timepicker" name="startTime">
+                        <input id="timepicker" data-default="09:00:00" type="time" class="timepicker" name="startTime"
+                        value="{{$tournament->startTime}}">
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s6">
-                        <input placeholder="Spielzeit pro Match" id="spielzeit" type="number" class="validate" name="timePerGame">
+                        <input placeholder="Spielzeit pro Match" id="spielzeit" type="number" class="validate" name="timePerGame"
+                        value="{{$tournament->timePerGame}}">
                         <label for="spielzeit">Spielzeit pro Match</label>
                     </div>
                 </div>

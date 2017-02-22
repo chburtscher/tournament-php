@@ -9,8 +9,10 @@ use Illuminate\Support\Facades\Validator;
 
 class TimesController extends Controller
 {
-    public function showTimesForm(){
-        return view('pages.time');
+    public function showTimesForm($id){
+
+        $tournament = Tournament::find($id);
+        return view('pages.time', ['tournament' => $tournament]);
     }
 
     public function createTimes(Request $request, $id){
