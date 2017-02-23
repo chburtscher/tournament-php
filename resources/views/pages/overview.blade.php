@@ -62,12 +62,10 @@
     <div class="container team">
         <div class="row">
             <div class="input-field col m12 s6">
-                <textarea disabled="@foreach ($tournament->teams as $team)
+                <textarea disabled="teams" id="textarea1" class="materialize-textarea">@foreach ($tournament->teams as $team)
                         {{$team->name}}
-                    @endforeach" id="textarea1" class="materialze-textarea"></textarea>
-                <label for="textarea1">@foreach ($tournament->teams as $team)
-                        <li>{{$team->name}}</li>
-                    @endforeach</label>
+                    @endforeach</textarea>
+                <label for="textarea1">Mannschaften</label>
             </div>
         </div>
     </div>

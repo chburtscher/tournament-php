@@ -91,10 +91,11 @@
   border-bottom: 0.5px solid #9e9e9e;
 }
 
-.container .team .input-field .validate {
+.container .team .input-field .materialize-textarea {
   color: black;
   font-size: 16px;
   border-bottom: 0.5px solid #9e9e9e;
+  display: inline-block;
 }
 
 .container .time {
