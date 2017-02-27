@@ -69,6 +69,11 @@
             </div>
         </div>
     </div>
+    <div class="container overview">
+    <button class="btn-large" type="submit" name="action">Bearbeiten
+        <i class="material-icons right">mode_edit</i>
+    </button>
+    </div>
 
 
 @stop
