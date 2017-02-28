@@ -4,6 +4,16 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * @property int numberOfTeams
+ * @property int $numberOfFields
+ * @property int? $numberOfGroups
+ * @property Team[] $teams
+ * @property string $name
+ * @property int $id
+ * @property int $timePerGame
+ * @property \DateTime $startTime
+ */
 class Tournament extends Model
 {
     public function teams()

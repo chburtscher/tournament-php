@@ -36,9 +36,9 @@ class Base extends Migration
 
         Schema::create('game', function (Blueprint $table) {
             $table->integer('numberOfGames');
-            $table->string('team1');
-            $table->string('team2');
-            $table->string('referee');
+            $table->integer('team1_id');
+            $table->integer('team2_id');
+            $table->integer('referee_id');
             $table->string('winningTeam');
             $table->string('fieldNumber');
             $table->integer('winningPoints');
