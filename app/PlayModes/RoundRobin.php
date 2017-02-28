@@ -4,6 +4,7 @@ namespace App\PlayModes;
 
 
 use App\Game;
+use App\Team;
 use App\Tournament;
 
 class RoundRobin implements PlayModeInterface
@@ -33,12 +34,41 @@ class RoundRobin implements PlayModeInterface
         $rounds = ceil(count($games) / $gamesPerRound);
         for ($i=0; $i<$rounds; $i++){
             for ($j=0; $j<$gamesPerRound; $j++){
-                $index = $i * $gamesPerRound + $j;
-                if ($index < count($games)) {
-                    $games[$index]->round = $i;
-                    $games[$index]->field = $j;
+                $game = $this->getGameForSlot($games, $i, $j);
+                if ($game != null) {
+                    $game->round = $i;
+                    $game->field = $j;
                 }
             }
         }
     }
+
+    private function getGameForSlot(array $games, $round) {
+        foreach ($games as $game) {
+            if ($game->round !== null) {
+                continue;
+            } elseif (!$this->isTeamAvailable($games, $game->team1, $round)){
+                continue;
+            } elseif (!$this->isTeamAvailable($games, $game->team2, $round)){
+                continue;
+            }
+
+
+            return $game;
+        }
+    }
+
+    private function isTeamAvailable(array $games, Team $team, $round) {
+        foreach ($games as $game) {
+            if ($game->round !== $round ) {
+                continue;
+            }
+
+            if ($game->team1 == $team||$game->team2 == $team) {
+                return false;
+            }
+        }
+        return true;
+    }
 }
+
