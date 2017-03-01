@@ -16,12 +16,14 @@ class RoundRobin implements PlayModeInterface
      */
     public function calculateGames(Tournament $tournament) {
         $games=[];
-        for ($i=0; $i<$tournament->numberOfTeams; $i++){
-            for ($j=$i+1; $j<$tournament->numberOfTeams; $j++){
+        for ($i = 0; $i<$tournament->numberOfTeams; $i++){
+            for ($j = $i + 1; $j<$tournament->numberOfTeams; $j++)
+                for ($k = $j + 1; $k<$tournament->numberOfTeams; $k++) {
                 $game = new Game();
                 $games[]=$game;
                 $game->team1=$tournament->teams[$i];
                 $game->team2=$tournament->teams[$j];
+                $game->referee=$tournament->teams[$k];
             }
         }
         $this->assignSchedule($tournament, $games);
@@ -51,6 +53,8 @@ class RoundRobin implements PlayModeInterface
                 continue;
             } elseif (!$this->isTeamAvailable($games, $game->team2, $round)){
                 continue;
+            } elseif (!this->$this->isTeamAvailable($games, $game->referee, $round)){
+                continue;
             }
 
 
@@ -64,7 +68,7 @@ class RoundRobin implements PlayModeInterface
                 continue;
             }
 
-            if ($game->team1 == $team||$game->team2 == $team) {
+            if ($game->team1 == $team||$game->team2 == $team ||$game->referee == $team) {
                 return false;
             }
         }

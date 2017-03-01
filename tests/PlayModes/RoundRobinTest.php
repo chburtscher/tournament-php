@@ -99,19 +99,19 @@ class RoundRobinTest extends \PHPUnit_Framework_TestCase
     {
         $games = $this->playMode->calculateGames($this->tournament);
 
-        echo "Team 1, Team2, Runde, Feld\n";
+        echo "Team 1, Team2, Schiri, Runde, Feld\n";
 
         foreach ($games as $game) {
-            echo $game->team1->name . ", " . $game->team2->name . ", " . $game->round . ", " . $game->field . "\n";
+            echo $game->team1->name . ", " . $game->team2->name . ", " . $game->referee->name . ", ". $game->round . ", " . $game->field . "\n";
         }
     }
 
-    private function assertHasGame($games, $teamA, $teamB)
+    private function assertHasGame($games, $teamA, $teamB, $referee)
     {
         foreach ($games as $game) {
-            if ($game->team1 == $teamA && $game->team2 == $teamB) {
+            if ($game->team1 == $teamA && $game->team2 == $teamB && $game->referee == $referee) {
                 return;
-            } elseif ($game->team1 == $teamB && $game->team2 == $teamA) {
+            } elseif ($game->team1 == $teamB && $game->team2 == $teamA && $game->referee == $referee) {
                 return;
             }
         }
