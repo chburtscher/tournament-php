@@ -106,12 +106,12 @@ class RoundRobinTest extends \PHPUnit_Framework_TestCase
         }
     }
 
-    private function assertHasGame($games, $teamA, $teamB, $referee)
+    private function assertHasGame($games, $teamA, $teamB)
     {
         foreach ($games as $game) {
-            if ($game->team1 == $teamA && $game->team2 == $teamB && $game->referee == $referee) {
+            if ($game->team1 == $teamA && $game->team2 == $teamB) {
                 return;
-            } elseif ($game->team1 == $teamB && $game->team2 == $teamA && $game->referee == $referee) {
+            } elseif ($game->team1 == $teamB && $game->team2 == $teamA) {
                 return;
             }
         }
