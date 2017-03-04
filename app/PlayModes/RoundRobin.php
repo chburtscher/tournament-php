@@ -16,8 +16,8 @@ class RoundRobin implements PlayModeInterface
      */
     public function calculateGames(Tournament $tournament) {
         $games=[];
-        for ($i=0; $i<$tournament->numberOfTeams; $i++){
-            for ($j=$i+1; $j<$tournament->numberOfTeams; $j++){
+        for ($i = 0; $i<$tournament->numberOfTeams; $i++){
+            for ($j = $i + 1; $j<$tournament->numberOfTeams; $j++) {
                 $game = new Game();
                 $games[]=$game;
                 $game->team1=$tournament->teams[$i];
@@ -25,6 +25,7 @@ class RoundRobin implements PlayModeInterface
             }
         }
         $this->assignSchedule($tournament, $games);
+        $this->assignReferee($tournament, $games);
         return $games;
     }
 
@@ -34,7 +35,7 @@ class RoundRobin implements PlayModeInterface
         $rounds = ceil(count($games) / $gamesPerRound);
         for ($i=0; $i<$rounds; $i++){
             for ($j=0; $j<$gamesPerRound; $j++){
-                $game = $this->getGameForSlot($games, $i, $j);
+                $game = $this->getGameForSlot($games, $i);
                 if ($game != null) {
                     $game->round = $i;
                     $game->field = $j;
@@ -64,11 +65,27 @@ class RoundRobin implements PlayModeInterface
                 continue;
             }
 
-            if ($game->team1 == $team||$game->team2 == $team) {
+            if ($game->team1 == $team || $game->team2 == $team || $game->referee == $team) {
                 return false;
             }
         }
         return true;
+    }
+
+    private function  assignReferee(Tournament $tournament, array $games) {
+        foreach ($games as $game) {
+            $availableReferees = [];
+            foreach ($tournament->teams as $team) {
+                if ($this->isTeamAvailable($games, $team, $game->round)){
+                    $availableReferees[] = $team;
+                }
+            }
+
+
+
+            $index = mt_rand(0, count($availableReferees)-1);
+            $game->referee = $availableReferees[$index];
+        }
     }
 }
 
