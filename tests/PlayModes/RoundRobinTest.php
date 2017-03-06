@@ -8,13 +8,14 @@
 
 namespace Tests\PlayModes;
 
+use App\Game;
 use App\PlayModes\PlayModeInterface;
 use App\PlayModes\RoundRobin;
 use App\Team;
 use App\Tournament;
 use Tests\TestCase;
 
-class RoundRobinTest extends \PHPUnit_Framework_TestCase
+class RoundRobinTest extends TestCase
 {
     /**
      * @var PlayModeInterface
@@ -24,6 +25,8 @@ class RoundRobinTest extends \PHPUnit_Framework_TestCase
 
     public function setUp()
     {
+        parent::setUp();
+
         $this->playMode = new RoundRobin();
 
         $team1 = new Team();
@@ -72,6 +75,10 @@ class RoundRobinTest extends \PHPUnit_Framework_TestCase
     {
         $games = $this->playMode->calculateGames($this->tournament);
 
+        $this->printGames($games);
+
+        $this->assertNoConflict($games);
+
         $this->assertHasGame($games, $this->tournament->teams[0], $this->tournament->teams[1]);
         $this->assertHasGame($games, $this->tournament->teams[0], $this->tournament->teams[2]);
         $this->assertHasGame($games, $this->tournament->teams[0], $this->tournament->teams[3]);
@@ -95,19 +102,9 @@ class RoundRobinTest extends \PHPUnit_Framework_TestCase
         $this->assertHasGame($games, $this->tournament->teams[5], $this->tournament->teams[6]);
     }
 
-    public function testFoo()
-    {
-        $games = $this->playMode->calculateGames($this->tournament);
-
-        echo "Team 1, Team2, Schiri, Runde, Feld\n";
-
-        foreach ($games as $game) {
-            echo $game->team1->name . ", " . $game->team2->name . ", " . $game->referee->name . ", ". $game->round . ", " . $game->field . "\n";
-        }
-    }
-
     private function assertHasGame($games, $teamA, $teamB)
     {
+        /** @var Game $game */
         foreach ($games as $game) {
             if ($game->team1 == $teamA && $game->team2 == $teamB) {
                 return;
@@ -117,5 +114,51 @@ class RoundRobinTest extends \PHPUnit_Framework_TestCase
         }
 
         $this->fail("No game with teams {$teamA->name} and {$teamB->name}.");
+    }
+
+    private function assertNoConflict(array $games)
+    {
+        $teamRoundAssignments = [];
+        $roundFieldAssignments = [];
+
+        /** @var Game $game */
+        foreach ($games as $game) {
+            // First check if this field is used multiple times in the same round
+            if (isset($roundFieldAssignments[$game->round][$game->field])) {
+                $this->fail("Field {$game->field} is used twice in round {$game->round}.");
+            }
+            $roundFieldAssignments[$game->round][$game->field] = true;
+
+            // Check team 1
+            if (isset($teamRoundAssignments[$game->round][$game->team1->name])) {
+                $this->fail("Team '{$game->team1->name}' is used twice in round {$game->round}.");
+            }
+            $teamRoundAssignments[$game->round][$game->team1->name] = true;
+
+            // Check team 2
+            if (isset($teamRoundAssignments[$game->round][$game->team2->name])) {
+                $this->fail("Team '{$game->team2->name}' is used twice in round {$game->round}.");
+            }
+            $teamRoundAssignments[$game->round][$game->team2->name] = true;
+
+            // Check referee
+            if (isset($teamRoundAssignments[$game->round][$game->referee->name])) {
+                $this->fail("Team '{$game->referee->name}' is used twice in round {$game->round}.");
+            }
+            $teamRoundAssignments[$game->round][$game->referee->name] = true;
+        }
+    }
+
+    private function printGames(array $games) {
+        echo "Team 1 | Team 2 | Referee | Round | Field\n" .
+             "-----------------------------------------\n";
+
+        foreach ($games as $game) {
+            echo str_pad($game->team1->name, 6, " ") . " | " .
+                 str_pad($game->team2->name, 6, " ") . " | " .
+                 str_pad($game->referee->name, 7, " ") . " | " .
+                 str_pad($game->round, 5, " ") . " | " .
+                 str_pad($game->field, 5, " ") . "\n";
+        }
     }
 }
