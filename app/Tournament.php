@@ -16,23 +16,35 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Tournament extends Model
 {
+    protected $fillable = [
+        'name',
+        'mode',
+        'playMode',
+        'numberOfGroups',
+        'numberOfTeams',
+        'numberOfFields',
+        'formOfSport',
+        'timePerGame',
+        'startTime',
+    ];
+
     public function teams()
     {
-        return $this->hasMany('App\Team');
+        return $this->hasMany(Team::class);
     }
+
     public function user()
     {
-        return $this->belongsTo('App\Tournament', 'user_id', 'id');
+        return $this->belongsTo(Tournament::class);
     }
+
     public function contributors()
     {
-        return $this->belongsToMany('App\User');
+        return $this->belongsToMany(User::class);
     }
+
     public function games()
     {
-        return $this->hasMany('App\game');
+        return $this->hasMany(Game::class);
     }
-    protected $fillable = [
-        'name', 'mode', 'playMode', 'numberOfGroups', 'numberOfTeams', 'numberOfFields', 'formOfSport',
-    ];
 }

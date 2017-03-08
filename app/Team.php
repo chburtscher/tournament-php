@@ -4,17 +4,20 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * @property string $name
+ * @property Tournament $tournament
+ * @property int $tournament_id
+ */
 class Team extends Model
 {
+    protected $fillable = [
+        'name',
+        'tournament_id',
+    ];
+
     public function tournament()
     {
-        return $this->belongsTo('App\Tournament', 'tournament_id', 'id');
+        return $this->belongsTo(Tournament::class);
     }
-    public function game()
-    {
-        return $this->belongsToMany('App\Game');
-    }
-    protected $fillable = [
-        'name', 'tournament_id',
-    ];
 }

@@ -47,6 +47,11 @@ return [
             'engine' => null,
         ],
 
+        'testing' => [
+            'driver'   => 'sqlite',
+            'database' => ':memory:',
+            'prefix'   => ''
+        ],
     ],
 
     /*
